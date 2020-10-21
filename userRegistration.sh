@@ -6,7 +6,9 @@ shopt -s extglob
 
 read -p "Enter Valid First name: " fname
 
-regex="^[A-Z]{1}[a-z]{2}$"
+#First name and last name.
+
+regex="^[A-Z]{1}[a-z]{2}[a-zA-Z]{3}$"
 
 if [[ $fname =~ $regex ]]
 then
