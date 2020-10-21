@@ -8,7 +8,7 @@ read -p "Enter Valid First name: " fname
 
 #First name and last name.
 
-regex="^[A-Z]{1}[a-z]{2}[a-zA-Z]{3}$"
+regex="^[a-zA-Z0-9]+([-+.]?)([a-zA-Z0-9]?)+@[a-zA-Z0-9]+.+[a-z]+([.]?)([a-z]?)$"
 
 if [[ $fname =~ $regex ]]
 then
