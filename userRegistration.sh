@@ -16,3 +16,14 @@ then
 else
 	echo "Invaid : " $fname
 fi
+
+#Mobile format
+read -p "Enter valid Mobile number: " mob
+regex1="[1-9+][ ][0-9]{10}$"
+
+if [[ $mob =~ $regex1 ]]
+then
+	echo "Valid number: " $mob
+else
+	echo "Invalid numer: " $mob
+fi
