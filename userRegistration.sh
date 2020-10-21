@@ -6,7 +6,7 @@ shopt -s extglob
 
 read -p "Enter Valid First name: " fname
 
-#First name and last name.
+#Email validation.
 
 regex="^[a-zA-Z0-9]+([-+.]?)([a-zA-Z0-9]?)+@[a-zA-Z0-9]+.+[a-z]+([.]?)([a-z]?)$"
 
