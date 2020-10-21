@@ -27,3 +27,17 @@ then
 else
 	echo "Invalid numer: " $mob
 fi
+
+#Password
+read -p "Enter Password: " password
+
+#Minimum 8 characters
+regex2="[a-zA-Z0-9]{8,16}"
+
+if [[ $password =~ $regex2 ]]
+then
+        echo "Valid number: " $password
+else
+        echo "Invalid numer: " $password
+fi
+
