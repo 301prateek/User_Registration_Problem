@@ -4,20 +4,22 @@
 
 shopt -s extglob
 
-read -p "Enter Valid First name: " fname
+read -p "Enter Valid email address: " email
 
 #Email validation.
 
 regex="^[a-zA-Z0-9]+([-+.]?)([a-zA-Z0-9]?)+@[a-zA-Z0-9]+.+[a-z]+([.]?)([a-z]?)$"
 
-if [[ $fname =~ $regex ]]
+if [[ $email =~ $regex ]]
 then
-	echo "Valid : " $fname
+	echo "Valid : " $email
 else
-	echo "Invaid : " $fname
+	echo "Invalid : " $email
 fi
 
+
 #Mobile format
+
 read -p "Enter valid Mobile number: " mob
 regex1="[1-9+][ ][0-9]{10}$"
 
@@ -28,16 +30,18 @@ else
 	echo "Invalid numer: " $mob
 fi
 
+
 #Password
 read -p "Enter Password: " password
 
-#Minimum 8 characters
-regex2="[a-zA-Z0-9]{8,16}"
+#Minimum 8 characters, atleast 1 upper case
 
-if [[ $password =~ $regex2 ]]
+pat="[A-Z]$"
+
+if [[ $password =~ $pat ]]
 then
-        echo "Valid number: " $password
+        echo "Valid : " $password
 else
-        echo "Invalid numer: " $password
+        echo "Invalid: " $password
 fi
 
