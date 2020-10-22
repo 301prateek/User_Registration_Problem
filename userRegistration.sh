@@ -2,11 +2,13 @@
 #Author: Prateek Patil
 #User Registration Problem
 
+#Users First name
+
 shopt -s extglob
 
 read -p "Enter Valid First name: " fname
 
-regex="^[A-Z]{1}[a-z]{2}$"
+regex="^[A-Z]{1}[a-z]{3,}$"
 
 if [[ $fname =~ $regex ]]
 then
